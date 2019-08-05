@@ -7,7 +7,7 @@
 #
 # Host: 192.168.20.20 (MySQL 5.6.44)
 # Database: Collector
-# Generation Time: 2019-08-05 12:54:28 +0000
+# Generation Time: 2019-08-05 14:24:26 +0000
 # ************************************************************
 
 
@@ -28,9 +28,10 @@ DROP TABLE IF EXISTS `garden plants`;
 CREATE TABLE `garden plants` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `plant_name` varchar(255) NOT NULL DEFAULT '',
-  `plant_type` varchar(255) NOT NULL DEFAULT '',
-  `position` varchar(255) NOT NULL DEFAULT '',
-  `soil_type` varchar(255) NOT NULL DEFAULT '',
+  `latin_name` varchar(255) NOT NULL,
+  `plant_type` enum('Roses','Perennials','Annuals','Biennials','Bulbs','Shrubs','Trees','Vegetables','Herbs','Climbers','Hedging','Ferns') NOT NULL DEFAULT 'Roses',
+  `position` enum('Full Sun','Shade','Light Shade','Full Sun/Light Shade') NOT NULL DEFAULT 'Full Sun',
+  `soil_type` enum('Chalky','Sandy','Clay','Silty','Peaty','Loamy','Any Soil Type') NOT NULL DEFAULT 'Chalky',
   `colour` varchar(255) DEFAULT NULL,
   `cost` int(10) unsigned NOT NULL,
   `image` varchar(255) DEFAULT NULL,
@@ -40,9 +41,11 @@ CREATE TABLE `garden plants` (
 LOCK TABLES `garden plants` WRITE;
 /*!40000 ALTER TABLE `garden plants` DISABLE KEYS */;
 
-INSERT INTO `garden plants` (`id`, `plant_name`, `plant_type`, `position`, `soil_type`, `colour`, `cost`, `image`)
+INSERT INTO `garden plants` (`id`, `plant_name`, `latin_name`, `plant_type`, `position`, `soil_type`, `colour`, `cost`, `image`)
 VALUES
-	(1,'','','','',NULL,0,NULL);
+	(1,'Himalayan Birch','Betula utilis var. jacquemontii','Trees','Full Sun/Light Shade','Any Soil Type',NULL,0,NULL),
+	(2,'Serviceberry Robin Hill','Amelanchier x grandiflora','Trees','Full Sun','Clay',NULL,5634,NULL),
+	(3,'New Dawn','Rosa \'The New Dawn\'','Roses','Full Sun','Chalky',NULL,0,NULL);
 
 /*!40000 ALTER TABLE `garden plants` ENABLE KEYS */;
 UNLOCK TABLES;
