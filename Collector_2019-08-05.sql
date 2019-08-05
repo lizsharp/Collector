@@ -7,7 +7,7 @@
 #
 # Host: 192.168.20.20 (MySQL 5.6.44)
 # Database: Collector
-# Generation Time: 2019-08-05 12:12:03 +0000
+# Generation Time: 2019-08-05 12:54:28 +0000
 # ************************************************************
 
 
@@ -32,7 +32,7 @@ CREATE TABLE `garden plants` (
   `position` varchar(255) NOT NULL DEFAULT '',
   `soil_type` varchar(255) NOT NULL DEFAULT '',
   `colour` varchar(255) DEFAULT NULL,
-  `cost` float unsigned NOT NULL,
+  `cost` int(10) unsigned NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
