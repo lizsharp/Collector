@@ -7,7 +7,7 @@
 #
 # Host: 192.168.20.20 (MySQL 5.6.44)
 # Database: Collector
-# Generation Time: 2019-08-05 14:24:26 +0000
+# Generation Time: 2019-08-05 15:00:57 +0000
 # ************************************************************
 
 
@@ -31,7 +31,7 @@ CREATE TABLE `garden plants` (
   `latin_name` varchar(255) NOT NULL,
   `plant_type` enum('Roses','Perennials','Annuals','Biennials','Bulbs','Shrubs','Trees','Vegetables','Herbs','Climbers','Hedging','Ferns') NOT NULL DEFAULT 'Roses',
   `position` enum('Full Sun','Shade','Light Shade','Full Sun/Light Shade') NOT NULL DEFAULT 'Full Sun',
-  `soil_type` enum('Chalky','Sandy','Clay','Silty','Peaty','Loamy','Any Soil Type') NOT NULL DEFAULT 'Chalky',
+  `soil_type` enum('Chalky','Sandy','Clay','Silty','Peaty','Loamy','Any') NOT NULL DEFAULT 'Chalky',
   `colour` varchar(255) DEFAULT NULL,
   `cost` int(10) unsigned NOT NULL,
   `image` varchar(255) DEFAULT NULL,
@@ -43,9 +43,9 @@ LOCK TABLES `garden plants` WRITE;
 
 INSERT INTO `garden plants` (`id`, `plant_name`, `latin_name`, `plant_type`, `position`, `soil_type`, `colour`, `cost`, `image`)
 VALUES
-	(1,'Himalayan Birch','Betula utilis var. jacquemontii','Trees','Full Sun/Light Shade','Any Soil Type',NULL,0,NULL),
-	(2,'Serviceberry Robin Hill','Amelanchier x grandiflora','Trees','Full Sun','Clay',NULL,5634,NULL),
-	(3,'New Dawn','Rosa \'The New Dawn\'','Roses','Full Sun','Chalky',NULL,0,NULL);
+	(1,'Himalayan Birch','Betula utilis var. jacquemontii','Trees','Full Sun/Light Shade','Any',NULL,0,NULL),
+	(2,'Serviceberry Robin Hill','Amelanchier x grandiflora','Trees','Full Sun','Clay','',5634,NULL),
+	(3,'New Dawn','Rosa \'The New Dawn\'','Roses','Full Sun','Chalky','Pink',1074,NULL);
 
 /*!40000 ALTER TABLE `garden plants` ENABLE KEYS */;
 UNLOCK TABLES;
