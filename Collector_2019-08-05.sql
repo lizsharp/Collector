@@ -7,7 +7,7 @@
 #
 # Host: 192.168.20.20 (MySQL 5.6.44)
 # Database: Collector
-# Generation Time: 2019-08-05 15:00:57 +0000
+# Generation Time: 2019-08-05 15:49:04 +0000
 # ************************************************************
 
 
@@ -43,9 +43,15 @@ LOCK TABLES `garden plants` WRITE;
 
 INSERT INTO `garden plants` (`id`, `plant_name`, `latin_name`, `plant_type`, `position`, `soil_type`, `colour`, `cost`, `image`)
 VALUES
-	(1,'Himalayan Birch','Betula utilis var. jacquemontii','Trees','Full Sun/Light Shade','Any',NULL,0,NULL),
-	(2,'Serviceberry Robin Hill','Amelanchier x grandiflora','Trees','Full Sun','Clay','',5634,NULL),
-	(3,'New Dawn','Rosa \'The New Dawn\'','Roses','Full Sun','Chalky','Pink',1074,NULL);
+	(1,'Himalayan Birch','Betula utilis var. jacquemontii','Trees','Full Sun/Light Shade','Any',NULL,3834,NULL),
+	(2,'Serviceberry, Robin Hill','Amelanchier x grandiflora','Trees','Full Sun','Clay','',5634,NULL),
+	(3,'New Dawn','Rosa \'The New Dawn\'','Roses','Full Sun','Chalky','Pink',1074,NULL),
+	(4,'Hornbeam','Carpinus betulus','Hedging','Full Sun','Clay',NULL,7417,NULL),
+	(5,'Rosemary','Rosmarinus officinalis','Herbs','Full Sun','Any',NULL,1299,NULL),
+	(6,'Thyme, Snowdrift','Thymus serpyllum','Herbs','Full Sun','Sandy',NULL,200,NULL),
+	(7,'Dill','Anethum graveolens','Herbs','Full Sun/Light Shade','Peaty',NULL,225,NULL),
+	(8,'Pansy','Disambiguation','Annuals','Full Sun','Peaty','Various',250,NULL),
+	(9,'Cherry, Bird Colarato','Prunus serrulata','Trees','Full Sun','Clay','bronze/pink',4450,NULL);
 
 /*!40000 ALTER TABLE `garden plants` ENABLE KEYS */;
 UNLOCK TABLES;
