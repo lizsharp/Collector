@@ -11,4 +11,14 @@ $db->setAttribute(
     PDO::FETCH_ASSOC
 );
 
-echo 'Hello';
+$sql = $db->prepare('SELECT * FROM `garden_plants`');
+
+//execute
+$sql-> execute();
+
+//fetch results
+$results=$sql->fetchAll();
+
+var_dump ($results);
+
+
