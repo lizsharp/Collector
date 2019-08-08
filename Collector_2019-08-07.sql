@@ -7,7 +7,7 @@
 #
 # Host: 192.168.20.20 (MySQL 5.6.44)
 # Database: Collector
-# Generation Time: 2019-08-05 15:49:04 +0000
+# Generation Time: 2019-08-07 15:25:28 +0000
 # ************************************************************
 
 
@@ -29,7 +29,7 @@ CREATE TABLE `garden plants` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `plant_name` varchar(255) NOT NULL DEFAULT '',
   `latin_name` varchar(255) NOT NULL,
-  `plant_type` enum('Roses','Perennials','Annuals','Biennials','Bulbs','Shrubs','Trees','Vegetables','Herbs','Climbers','Hedging','Ferns') NOT NULL DEFAULT 'Roses',
+  `plant_type` enum('Rose','Perennial','Annual','Biennial','Bulb','Shrub','Tree','Vegetable','Herb','Climber','Hedging','Fern','Fruit') NOT NULL DEFAULT 'Rose',
   `position` enum('Full Sun','Shade','Light Shade','Full Sun/Light Shade') NOT NULL DEFAULT 'Full Sun',
   `soil_type` enum('Chalky','Sandy','Clay','Silty','Peaty','Loamy','Any') NOT NULL DEFAULT 'Chalky',
   `colour` varchar(255) DEFAULT NULL,
@@ -43,15 +43,26 @@ LOCK TABLES `garden plants` WRITE;
 
 INSERT INTO `garden plants` (`id`, `plant_name`, `latin_name`, `plant_type`, `position`, `soil_type`, `colour`, `cost`, `image`)
 VALUES
-	(1,'Himalayan Birch','Betula utilis var. jacquemontii','Trees','Full Sun/Light Shade','Any',NULL,3834,NULL),
-	(2,'Serviceberry, Robin Hill','Amelanchier x grandiflora','Trees','Full Sun','Clay','',5634,NULL),
-	(3,'New Dawn','Rosa \'The New Dawn\'','Roses','Full Sun','Chalky','Pink',1074,NULL),
+	(1,'Himalayan Birch','Betula utilis var. jacquemontii','Tree','Full Sun/Light Shade','Any',NULL,3834,NULL),
+	(2,'Serviceberry, Robin Hill','Amelanchier x grandiflora','Tree','Full Sun','Clay','',5634,NULL),
+	(3,'New Dawn','Rosa \'The New Dawn\'','Rose','Full Sun','Chalky','Pink',1074,NULL),
 	(4,'Hornbeam','Carpinus betulus','Hedging','Full Sun','Clay',NULL,7417,NULL),
-	(5,'Rosemary','Rosmarinus officinalis','Herbs','Full Sun','Any',NULL,1299,NULL),
-	(6,'Thyme, Snowdrift','Thymus serpyllum','Herbs','Full Sun','Sandy',NULL,200,NULL),
-	(7,'Dill','Anethum graveolens','Herbs','Full Sun/Light Shade','Peaty',NULL,225,NULL),
-	(8,'Pansy','Disambiguation','Annuals','Full Sun','Peaty','Various',250,NULL),
-	(9,'Cherry, Bird Colarato','Prunus serrulata','Trees','Full Sun','Clay','bronze/pink',4450,NULL);
+	(5,'Rosemary','Rosmarinus officinalis','Herb','Full Sun','Any',NULL,1299,NULL),
+	(6,'Thyme, Snowdrift','Thymus serpyllum','Herb','Full Sun','Sandy',NULL,200,NULL),
+	(7,'Dill','Anethum graveolens','Herb','Full Sun/Light Shade','Peaty',NULL,225,NULL),
+	(8,'Pansy','Disambiguation','Annual','Full Sun','Peaty','Black',250,NULL),
+	(9,'Cherry, Bird Colarato','Prunus serrulata','Tree','Full Sun','Clay','Bronze/pink',4450,NULL),
+	(10,'Honeywort','Cerinthe major','Perennial','Full Sun','Any','Purple',1099,NULL),
+	(11,'Wallflower, Bowles\' Mauve','Erysimum linifolium glaucum','Perennial','Full Sun','Clay','Purple',650,NULL),
+	(12,'Geranium','Pelargonium','Biennial','Full Sun','Loamy','Coral',550,NULL),
+	(13,'Daffodil','Narcissus','Bulb','Full Sun/Light Shade','Any','Yellow',250,NULL),
+	(14,'Mexican Orange','Choisya ternate','Shrub','Full Sun','Clay',NULL,2990,NULL),
+	(15,'Dwarf French Beans','Phaseolus vulgaris','Vegetable','Full Sun','Any',NULL,299,NULL),
+	(16,'Clematis Montana','Clematis Orientalis','Climber','Full Sun','Any','Pink',1999,NULL),
+	(17,'Fern, Holly','Cyrtomium falcatum','Fern','Shade','Any','Green',599,NULL),
+	(18,'Raspberry','Rubus idaeus','Fruit','Full Sun','Clay',NULL,550,NULL),
+	(19,'Apple Tree','Malus domestica','Tree','Full Sun','Clay',NULL,3950,NULL),
+	(20,'Honeysuckle','Lonicera','Climber','Full Sun','Any','pink/yellow',0,NULL);
 
 /*!40000 ALTER TABLE `garden plants` ENABLE KEYS */;
 UNLOCK TABLES;
