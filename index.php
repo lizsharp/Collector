@@ -22,12 +22,12 @@ function displayData($plants) {
         $plantHtml .='<div>
             <ul>
             <li>'. 'Name: ' . $plant['plant_name'] .'</li>
-            <li>'. 'Latin name: ' . $plant['latin_name'] .'</li>
+            <li>'. 'Latin name: <span class="latin">' . $plant['latin_name'] .'</span></li>
             <li>'. 'Type: ' .$plant['plant_type'] .'</li>
             <li>'. 'Position: '. $plant['position'] .'</li>
             <li>'. 'Soil type: ' . $plant['soil_type'] .'</li>
             <li>'. 'Colour:' . $plant['colour'] .'</li>
-            <li>'. 'Cost: ' . $plant['cost'] .'</li>
+            <li>'. 'Cost: £' . $plant['cost'] .'</li>
             <br>
             </ul>
             </div>';
@@ -54,6 +54,7 @@ $plantDisplay = displayData($results)
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <h1>The Gardeners Collection</h1>
     <?php echo $plantDisplay; ?>
 </body>
 
