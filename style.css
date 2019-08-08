@@ -7,3 +7,17 @@
 body {
     font-size: 62.5%;
 }
+
+.latin {
+    font-style: italic;
+}
+
+.plant-list {
+    margin: 0 25px 10px 20px;
+    padding: 20px;
+    background-color: #74C495;
+}
+
+h1 {
+    margin: 10px;
+}
