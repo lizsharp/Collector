@@ -7,7 +7,7 @@
 #
 # Host: 192.168.20.20 (MySQL 5.6.44)
 # Database: Collector
-# Generation Time: 2019-08-07 15:25:28 +0000
+# Generation Time: 2019-08-08 09:53:38 +0000
 # ************************************************************
 
 
@@ -20,12 +20,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-# Dump of table garden plants
+# Dump of table garden_plants
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `garden plants`;
+DROP TABLE IF EXISTS `garden_plants`;
 
-CREATE TABLE `garden plants` (
+CREATE TABLE `garden_plants` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `plant_name` varchar(255) NOT NULL DEFAULT '',
   `latin_name` varchar(255) NOT NULL,
@@ -38,10 +38,10 @@ CREATE TABLE `garden plants` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `garden plants` WRITE;
-/*!40000 ALTER TABLE `garden plants` DISABLE KEYS */;
+LOCK TABLES `garden_plants` WRITE;
+/*!40000 ALTER TABLE `garden_plants` DISABLE KEYS */;
 
-INSERT INTO `garden plants` (`id`, `plant_name`, `latin_name`, `plant_type`, `position`, `soil_type`, `colour`, `cost`, `image`)
+INSERT INTO `garden_plants` (`id`, `plant_name`, `latin_name`, `plant_type`, `position`, `soil_type`, `colour`, `cost`, `image`)
 VALUES
 	(1,'Himalayan Birch','Betula utilis var. jacquemontii','Tree','Full Sun/Light Shade','Any',NULL,3834,NULL),
 	(2,'Serviceberry, Robin Hill','Amelanchier x grandiflora','Tree','Full Sun','Clay','',5634,NULL),
@@ -64,7 +64,7 @@ VALUES
 	(19,'Apple Tree','Malus domestica','Tree','Full Sun','Clay',NULL,3950,NULL),
 	(20,'Honeysuckle','Lonicera','Climber','Full Sun','Any','pink/yellow',0,NULL);
 
-/*!40000 ALTER TABLE `garden plants` ENABLE KEYS */;
+/*!40000 ALTER TABLE `garden_plants` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
